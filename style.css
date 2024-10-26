@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Great+Vibes&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  max-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: rgb(71, 189, 189);
+
+  color: rgb(30, 94, 94);
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  min-height: 100%;
+
+  border: 1px solid silver;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+  margin: 10px;
+  padding: 10px;
+}
+
+.top {
+  width: 100%;
+  height: 80px;
+  display: flex;
+
+  justify-content: space-between;
+  background-color: rgb(173, 233, 233);
+  border-radius: 8px 8px 0px 0px;
+  box-shadow: 0px 5px 3px rgba(179, 176, 176, 0.363);
+
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 250px;
+
+  text-align: center;
+  font-family: "Agbalumo", system-ui;
+  font-weight: 550;
+  font-size: 14pt;
+}
+.imgLogo {
+  width: 100px;
+}
+
+.menuMobile,
+.menuBg {
+  display: none;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  & li {
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+
+    /* font-family: "Great Vibes", cursive; */
+    font-family: "Agbalumo", system-ui;
+    font-size: 15pt;
+  }
+  & li:hover {
+    cursor: pointer;
+    color: #fff;
+    filter: drop-shadow(2px 2px 2px #000);
+  }
+}
+
+.content {
+  width: 100%;
+  min-height: 100%;
+  padding: 10px;
+  flex: 1;
+  background-color: #fcf8f8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: verdana;
+
+  & img {
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+  }
+}
+
+.bottom {
+  width: 100%;
+  height: 30px;
+
+  border-radius: 0px 0px 8px 8px;
+  background-color: rgb(173, 233, 233);
+
+  font-size: 11pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Agbalumo", system-ui;
+  font-size: 10pt;
+}
+
+@media only screen and (min-width: 601px) {
+  .receitaImgIngredientes {
+    display: flex;
+
+    & .receitaIngredientes {
+      width: 60%;
+    }
+    & .receitaImgContainer {
+      width: 40%;
+      padding-right: 10px;
+    }
+    & .imgReceitas {
+      width: 100%;
+    }
+  }
+  .receitaModoDePreparo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    & .floatLeft {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 10px;
+
+      & p {
+        padding-left: 10px;
+        width: 100%;
+        text-align: justify;
+      }
+    }
+    & .imgReceitas {
+      width: 30%;
+    }
+    & p {
+      text-align: justify;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menuMobile {
+    display: block;
+  }
+  .top {
+    justify-content: center;
+  }
+  .logo {
+    font-size: 10pt;
+  }
+  .menu {
+    display: none;
+    align-items: start;
+
+    min-height: 100vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 8px 0px 0px 8px;
+    background-color: #fff;
+    color: rgb(71, 189, 189);
+    z-index: 99991;
+
+    & li {
+      display: block;
+    }
+  }
+  .menuShow {
+    display: flex;
+  }
+  .menuBg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    z-index: 99;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+  .receitaImgIngredientes {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .imgReceitas {
+      width: 100%;
+    }
+  }
+  .receitaModoDePreparo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    & .imgReceitas {
+      width: 70%;
+    }
+    & p {
+      text-align: justify;
+    }
+  }
+}
